@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> QUIZ</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1>Виберіть вікторину</h1>
+            <form method="post" action="index">
+                <select name = "quiz">
+                    {% for id,quiz in quiz_list%}
+                       <option value="{{id}}">{{quiz}}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Почати">
+            </form>
+        </main>
+    </body>
+</html>

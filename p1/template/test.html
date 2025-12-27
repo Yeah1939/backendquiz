@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QUIZ</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>{{question}}</h1>
+        <form method="post">
+            {% for answer in answer_list%}
+            <input type="radio" value="{{answer}}">
+            {%endfor%}
+        </form>
+    </body>
+</html>
