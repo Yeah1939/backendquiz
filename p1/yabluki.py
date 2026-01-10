@@ -86,6 +86,7 @@ def move_right():
         nigga_secret()
 
 screen.onkey(move_left, "Left")
+screen.onkey(move_left, "a")
 screen.onkey(move_right, "Right")
 screen.listen()
 
