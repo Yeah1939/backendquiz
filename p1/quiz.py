@@ -17,12 +17,18 @@ def index():
         start_quiz(quiz_id)
         return redirect(url_for("test"))
 
+def equals_question(answer,right_answer):
+    if answer == right_answer:
+        session["result"] +=1
+    session["total"] += 1
+
+
 def test():
     if not("quiz" in session) or int(session["quiz"]) <0:
         return redirect(url_for("index"))
     else:
         if request.method == "POST":
-            pass
+            equals_question(request.form.get(),session["next_question"][0][2])
         session["next_question"] = next_question(session["quiz"],session["total"])
         if session["next_question"] is None or len(session["next_question"])== 0:
             return redirect(url_for("result"))
