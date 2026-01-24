@@ -13,11 +13,14 @@
             <form method="post" class="test-form">
                 <div class="test-input">
                 {% for answer in answer_list%}
-                    <input type="radio" value="{{answer}}">
+                    <div class="tt-form">
+                        <input type="radio" value="{{answer}}" name="answer" id="{{answer}}" autocomplete="off">
+                        <label class="test-form" for="{{answer}}">{{answer}}</label>
+                    </div>
                 {%endfor%}
                 </div>
                 <div width="30%">
-                <input type="submit" value="Відповісти" class="btn btn-success">
+                    <input type="submit" value="Відповісти" class="btn btn-primary">
                 </div>
             </form>
         </div>

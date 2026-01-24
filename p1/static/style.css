@@ -13,7 +13,20 @@ html{
 }
 .container{
     width:80%;
-    height:50%;
+    height:65%;
+    border: 4px double rgb(84, 84, 84);
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 5% 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}
+.rcontainer{
+    width:50%;
+    height:65%;
     border: 4px double rgb(84, 84, 84);
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
@@ -36,4 +49,10 @@ html{
     justify-content: center;
     align-items: center;
     gap:20px;
+}
+.tt-form {
+    display: flex;
+    align-items: center; 
+    flex-direction: row; 
+    gap: 10px;
 }
