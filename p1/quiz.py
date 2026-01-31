@@ -30,7 +30,7 @@ def test():
         return redirect(url_for("index"))
     else:
         if request.method == "POST":
-            equals_question(request.form.get("answer"),session["next_question"][session["current_question"]-1][2])
+            equals_question(request.form.get("answer"),session["next_question"][session["current_question"]][2])
         #session["next_question"] = next_question(session["quiz"])
         if session["next_question"] is None or session["current_question"]== session["total"]:
             return redirect(url_for("result"))
